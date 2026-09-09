@@ -1,0 +1,57 @@
+{
+  "packageManager": "bun@1.3.14",
+  "name": "@forgeax-extension/ai-asset",
+  "version": "0.1.4",
+  "private": false,
+  "type": "module",
+  "description": "ForgeaX extension: Meshy-API-driven AI lowpoly prop asset generator.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForgeaX-Games/forgeax-ex-ai-asset.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "forgeax-extension.json",
+    "marketplace-card.json",
+    "schemas",
+    "server",
+    "shared",
+    "packages/external-asset-meta/src",
+    "packages/external-asset-meta/package.json",
+    "README.md",
+    "SOURCE_PROVENANCE.md",
+    "!server/**/*.test.ts"
+  ],
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build && node scripts/release-scan-compat.mjs",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview --port 15190",
+    "test": "bun test",
+    "check:release": "node scripts/check-release.mjs && node scripts/consumer-install-smoke.mjs"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.4.1",
+    "@gltf-transform/extensions": "^4.4.1",
+    "@gltf-transform/functions": "^4.4.1",
+    "cos-nodejs-sdk-v5": "^2.15.4",
+    "lucide-react": "^0.460.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.184.0",
+    "draco3dgltf": "^1.5.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.184.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}
