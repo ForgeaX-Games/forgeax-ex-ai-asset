@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "@forgeax-extension/ai-asset",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "displayName": {
     "zh": "AI 小物件低模生成",
     "en": "AI Asset Lowpoly Generator"
